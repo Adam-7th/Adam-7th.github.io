@@ -29,6 +29,8 @@ export function Header() {
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
   const menuToggleLabel = lang === "ru" ? "\u041c\u0435\u043d\u044e" : lang === "ar" ? "\u0627\u0644\u0642\u0627\u0626\u0645\u0629" : "Menu";
+  const closeMenuLabel =
+    lang === "ru" ? "\u0417\u0430\u043a\u0440\u044b\u0442\u044c \u043c\u0435\u043d\u044e" : lang === "ar" ? "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u0642\u0627\u0626\u0645\u0629" : "Close menu";
 
   useEffect(() => {
     if (!isMobileMenuOpen) return undefined;
@@ -165,6 +167,19 @@ export function Header() {
             }`}
           >
             <div className="mx-auto w-full max-w-[1320px] px-4 py-4 sm:px-6">
+              <div className="sticky top-0 z-10 -mx-4 mb-3 border-b border-edge bg-panel/95 px-4 py-2 sm:-mx-6 sm:px-6">
+                <div className="flex justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    aria-label={closeMenuLabel}
+                    className="inline-flex h-9 items-center rounded-full border border-edge bg-panel2 px-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-text"
+                  >
+                    X
+                  </button>
+                </div>
+              </div>
+
               <nav className="grid gap-3" aria-label="Mobile navigation">
                 {navItems.map((item) => (
                   <Link
