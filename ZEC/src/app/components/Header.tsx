@@ -14,6 +14,7 @@ export function Header() {
   const t = SITE_CONTENT[lang];
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showQuickMenu, setShowQuickMenu] = useState(false);
 
   const navItems = [
     { href: "/", label: t.nav.home },
@@ -77,9 +78,19 @@ export function Header() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => {
+      setShowQuickMenu(window.scrollY > 240);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-[150] border-b border-edge bg-panel/95 backdrop-blur lg:sticky lg:top-0 lg:z-50">
+      <header className="fixed inset-x-0 top-0 z-[170] border-b border-edge bg-panel shadow-[0_10px_30px_-24px_hsl(var(--accent)/0.55)] lg:sticky lg:top-0 lg:z-50 lg:bg-panel/95 lg:shadow-none lg:backdrop-blur">
         <div className="mx-auto flex w-full max-w-[1320px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-4 lg:px-8">
           <Link href="/" className="shrink-0 lg:justify-self-start" aria-label="ZEC home">
             <Logo />
@@ -149,7 +160,7 @@ export function Header() {
           className={`lg:hidden ${isMobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
         >
           <div
-            className={`fixed inset-0 z-[140] overflow-y-auto bg-bg pb-6 pt-[72px] shadow-[0_20px_45px_-30px_hsl(var(--accent)/0.55)] transition-[opacity,transform] duration-200 ${
+            className={`fixed inset-0 z-[160] overflow-y-auto bg-panel pb-6 pt-[72px] shadow-[0_20px_45px_-30px_hsl(var(--accent)/0.55)] transition-[opacity,transform] duration-200 ${
               isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
             }`}
           >
@@ -198,6 +209,20 @@ export function Header() {
       </header>
 
       <div className="h-[72px] lg:hidden" aria-hidden="true" />
+
+      {showQuickMenu && !isMobileMenuOpen ? (
+        <button
+          type="button"
+          onClick={() => setIsMobileMenuOpen(true)}
+          aria-label={menuToggleLabel}
+          className="fixed bottom-4 right-4 z-[180] inline-flex items-center gap-2 rounded-full border border-edge bg-panel px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-text shadow-[0_16px_32px_-22px_hsl(var(--accent)/0.65)] lg:hidden"
+        >
+          <span aria-hidden="true" className="text-sm leading-none">
+            |||
+          </span>
+          <span>{menuToggleLabel}</span>
+        </button>
+      ) : null}
     </>
   );
 }
