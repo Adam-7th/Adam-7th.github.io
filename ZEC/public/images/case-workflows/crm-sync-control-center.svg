@@ -1,0 +1,106 @@
+<svg width='1600' height='900' viewBox='0 0 1600 900' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <defs>
+    <linearGradient id='bgGrad' x1='0' y1='0' x2='1600' y2='900' gradientUnits='userSpaceOnUse'>
+      <stop offset='0' stop-color='#0A0C11'/>
+      <stop offset='1' stop-color='#131722'/>
+    </linearGradient>
+    <pattern id='dotGrid' width='28' height='28' patternUnits='userSpaceOnUse'>
+      <circle cx='1.6' cy='1.6' r='1.1' fill='#273245' fill-opacity='0.55'/>
+    </pattern>
+    <marker id='arrowHead' markerWidth='9' markerHeight='9' refX='7' refY='4.5' orient='auto'>
+      <path d='M0,0 L8,4.5 L0,9 z' fill='#D2DEEF'/>
+    </marker>
+  </defs>
+
+  <rect width='1600' height='900' rx='14' fill='url(#bgGrad)'/>
+  <rect x='30' y='26' width='1540' height='848' rx='14' fill='#0F1218' stroke='#262E3B'/>
+  <rect x='30' y='26' width='1540' height='56' rx='14' fill='#121720' stroke='#2B3442'/>
+  <circle cx='58' cy='54' r='6' fill='#364052'/>
+  <circle cx='78' cy='54' r='6' fill='#364052'/>
+  <circle cx='98' cy='54' r='6' fill='#364052'/>
+  <text x='126' y='58' fill='#D6E1F0' font-size='15' font-family='Segoe UI,Arial' font-weight='600'>CRM Sync Control Center</text>
+  <text x='126' y='74' fill='#8EA2C0' font-size='11' font-family='Segoe UI,Arial'>CRM Event -&gt; Normalize -&gt; Conflict Rules -&gt; Multi-system Sync -&gt; Audit Log</text>
+
+  <rect x='54' y='104' width='1492' height='746' rx='12' fill='url(#dotGrid)' opacity='0.58'/>
+
+  
+    <path d='M 370 393 C 460 393, 370 363, 460 363' stroke='#D2DEEF' stroke-opacity='0.9' stroke-width='2.2' fill='none' marker-end='url(#arrowHead)' />
+    
+  
+
+    <path d='M 650 363 C 740 363, 650 363, 740 363' stroke='#D2DEEF' stroke-opacity='0.9' stroke-width='2.2' fill='none' marker-end='url(#arrowHead)' />
+    
+  
+
+    <path d='M 930 363 C 1020 363, 930 333, 1020 333' stroke='#D2DEEF' stroke-opacity='0.9' stroke-width='2.2' fill='none' marker-end='url(#arrowHead)' />
+    
+  
+
+    <path d='M 1210 333 C 1300 333, 1210 393, 1300 393' stroke='#D2DEEF' stroke-opacity='0.9' stroke-width='2.2' fill='none' marker-end='url(#arrowHead)' />
+    
+  
+  
+    <g>
+      <rect x='180' y='360' width='190' height='66' rx='10' fill='#161A22' stroke='#353C49' />
+      <rect x='181.2' y='361.2' width='187.6' height='20' rx='9' fill='#37B6FF' fill-opacity='0.12' />
+      <rect x='190' y='367' width='22' height='22' rx='6' fill='#111722' stroke='#37B6FF' stroke-width='1.2' />
+      <text x='201' y='381' fill='#37B6FF' font-size='9' text-anchor='middle' font-family='Segoe UI,Arial' font-weight='700'>EV</text>
+      <text x='220' y='391' fill='#E7EEF8' font-size='12' font-family='Segoe UI,Arial' font-weight='600'>CRM Event Trigger</text>
+      
+      <circle cx='180' cy='393' r='3.2' fill='#8998AF' />
+      <circle cx='370' cy='393' r='3.2' fill='#8998AF' />
+    </g>
+  
+
+    <g>
+      <rect x='460' y='330' width='190' height='66' rx='10' fill='#161A22' stroke='#353C49' />
+      <rect x='461.2' y='331.2' width='187.6' height='20' rx='9' fill='#60A5FA' fill-opacity='0.12' />
+      <rect x='470' y='337' width='22' height='22' rx='6' fill='#111722' stroke='#60A5FA' stroke-width='1.2' />
+      <text x='481' y='351' fill='#60A5FA' font-size='9' text-anchor='middle' font-family='Segoe UI,Arial' font-weight='700'>NM</text>
+      <text x='500' y='361' fill='#E7EEF8' font-size='12' font-family='Segoe UI,Arial' font-weight='600'>Data Normalization</text>
+      
+      <circle cx='460' cy='363' r='3.2' fill='#8998AF' />
+      <circle cx='650' cy='363' r='3.2' fill='#8998AF' />
+    </g>
+  
+
+    <g>
+      <rect x='740' y='330' width='190' height='66' rx='10' fill='#161A22' stroke='#353C49' />
+      <rect x='741.2' y='331.2' width='187.6' height='20' rx='9' fill='#8DD3FF' fill-opacity='0.12' />
+      <rect x='750' y='337' width='22' height='22' rx='6' fill='#111722' stroke='#8DD3FF' stroke-width='1.2' />
+      <text x='761' y='351' fill='#8DD3FF' font-size='9' text-anchor='middle' font-family='Segoe UI,Arial' font-weight='700'>CR</text>
+      <text x='780' y='361' fill='#E7EEF8' font-size='12' font-family='Segoe UI,Arial' font-weight='600'>Conflict Rules</text>
+      
+      <circle cx='740' cy='363' r='3.2' fill='#8998AF' />
+      <circle cx='930' cy='363' r='3.2' fill='#8998AF' />
+    </g>
+  
+
+    <g>
+      <rect x='1020' y='300' width='190' height='66' rx='10' fill='#161A22' stroke='#353C49' />
+      <rect x='1021.2' y='301.2' width='187.6' height='20' rx='9' fill='#34D399' fill-opacity='0.12' />
+      <rect x='1030' y='307' width='22' height='22' rx='6' fill='#111722' stroke='#34D399' stroke-width='1.2' />
+      <text x='1041' y='321' fill='#34D399' font-size='9' text-anchor='middle' font-family='Segoe UI,Arial' font-weight='700'>SY</text>
+      <text x='1060' y='331' fill='#E7EEF8' font-size='12' font-family='Segoe UI,Arial' font-weight='600'>System Sync</text>
+      
+      <circle cx='1020' cy='333' r='3.2' fill='#8998AF' />
+      <circle cx='1210' cy='333' r='3.2' fill='#8998AF' />
+    </g>
+  
+
+    <g>
+      <rect x='1300' y='360' width='190' height='66' rx='10' fill='#161A22' stroke='#353C49' />
+      <rect x='1301.2' y='361.2' width='187.6' height='20' rx='9' fill='#10B981' fill-opacity='0.12' />
+      <rect x='1310' y='367' width='22' height='22' rx='6' fill='#111722' stroke='#10B981' stroke-width='1.2' />
+      <text x='1321' y='381' fill='#10B981' font-size='9' text-anchor='middle' font-family='Segoe UI,Arial' font-weight='700'>LG</text>
+      <text x='1340' y='391' fill='#E7EEF8' font-size='12' font-family='Segoe UI,Arial' font-weight='600'>Audit Log</text>
+      
+      <circle cx='1300' cy='393' r='3.2' fill='#8998AF' />
+      <circle cx='1490' cy='393' r='3.2' fill='#8998AF' />
+    </g>
+  
+
+  <rect x='54' y='778' width='1492' height='72' rx='10' fill='#121722' stroke='#2A3343'/>
+  <text x='78' y='806' fill='#8FA5C5' font-size='11' font-family='Segoe UI,Arial' letter-spacing='1.2'>EXECUTION</text>
+  <text x='78' y='828' fill='#C5D3E9' font-size='11' font-family='Segoe UI,Arial'>last run: success  |  mode: active  |  editor: n8n-style case workflow</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="1280" height="520" viewBox="0 0 1280 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="520" rx="28" fill="#0E1420"/>
+  <rect x="35" y="35" width="1210" height="450" rx="20" fill="#121C2D" stroke="#243247"/>
+  <rect x="90" y="190" width="250" height="130" rx="18" fill="#1B2A42" stroke="#2B4364"/>
+  <rect x="410" y="190" width="250" height="130" rx="18" fill="#1B2A42" stroke="#2B4364"/>
+  <rect x="730" y="190" width="250" height="130" rx="18" fill="#1B2A42" stroke="#2B4364"/>
+  <path d="M340 255H410" stroke="#5FA5FF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M660 255H730" stroke="#5FA5FF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="375" cy="255" r="8" fill="#5FA5FF"/>
+  <circle cx="695" cy="255" r="8" fill="#5FA5FF"/>
+  <text x="145" y="250" fill="#E8F1FF" font-size="22" font-family="Inter, Arial">Gmail Trigger</text>
+  <text x="445" y="250" fill="#E8F1FF" font-size="22" font-family="Inter, Arial">AI Draft</text>
+  <text x="770" y="250" fill="#E8F1FF" font-size="22" font-family="Inter, Arial">Human Approval</text>
+  <text x="1020" y="460" fill="#6D829E" font-family="Inter, Arial" font-size="16" letter-spacing="1">ZEC</text>
+</svg>
+

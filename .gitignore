@@ -1,2 +1,38 @@
+# Workspace-level ignore rules
+
+# Local editor/workspace files
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local history / backups
 .history/
+
+# Dependencies and build artifacts
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
+!ZEC/.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
