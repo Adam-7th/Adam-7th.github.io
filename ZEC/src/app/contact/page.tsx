@@ -162,8 +162,21 @@ export default function ContactPage() {
         ) : null}
 
         <div className="mt-4 overflow-hidden rounded-2xl border border-edge bg-panel2">
-          <iframe title={ui.calendlyTitle} src={calendlyPreviewUrl} className="h-[760px] w-full bg-white" loading="lazy" />
+          <iframe
+            title={ui.calendlyTitle}
+            src={calendlyPreviewUrl}
+            className="h-[620px] w-full bg-white sm:h-[700px] lg:h-[760px]"
+            loading="lazy"
+          />
         </div>
+        <a
+          href={PUBLIC_CALENDLY_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex rounded-full border border-edge px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-text hover:border-brand sm:hidden"
+        >
+          {ui.openLink}
+        </a>
       </section>
 
       <ClientOnboardingForm lang={lang} />
