@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { PUBLIC_CONTACT_MAILTO, PUBLIC_LINKEDIN_URL, PUBLIC_TELEGRAM_URL, PUBLIC_WHATSAPP_URL } from "@/lib/contactConfig";
 import { useLang } from "@/lib/lang";
 import { SITE_CONTENT } from "@/lib/siteContent";
 import { LangToggle } from "./LangToggle";
@@ -26,9 +28,16 @@ export function Header() {
     { href: "/about", label: t.nav.about },
     { href: "/contact", label: t.nav.contact },
   ];
+  const socialItems = [
+    { href: PUBLIC_LINKEDIN_URL, label: "LinkedIn", logoSrc: "/logos/linkedin.svg", external: true },
+    { href: PUBLIC_TELEGRAM_URL, label: "Telegram", logoSrc: "/logos/telegram.svg", external: true },
+    { href: PUBLIC_WHATSAPP_URL, label: "WhatsApp", logoSrc: "/logos/whatsapp.svg", external: true },
+    { href: PUBLIC_CONTACT_MAILTO, label: "Email", logoSrc: "/logos/gmail.svg" },
+  ];
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
   const menuToggleLabel = lang === "ru" ? "\u041c\u0435\u043d\u044e" : lang === "ar" ? "\u0627\u0644\u0642\u0627\u0626\u0645\u0629" : "Menu";
+  const connectLabel = lang === "ru" ? "\u0421\u0432\u044f\u0437\u044c" : lang === "ar" ? "\u062a\u0648\u0627\u0635\u0644" : "Connect";
   const closeMenuLabel =
     lang === "ru" ? "\u0417\u0430\u043a\u0440\u044b\u0442\u044c \u043c\u0435\u043d\u044e" : lang === "ar" ? "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u0642\u0627\u0626\u0645\u0629" : "Close menu";
 
@@ -197,6 +206,26 @@ export function Header() {
                 ))}
               </nav>
 
+              <div className="mt-4">
+                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">{connectLabel}</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {socialItems.map((item) => (
+                    <a
+                      key={`mobile-social-${item.label}`}
+                      href={item.href}
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noreferrer" : undefined}
+                      className="inline-flex items-center gap-2 rounded-xl border border-edge bg-panel2/70 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-text"
+                    >
+                      <span className="inline-flex h-6 w-6 items-center justify-center rounded-lg border border-edge bg-panel">
+                        <Image src={item.logoSrc} alt={item.label} width={13} height={13} className="object-contain" />
+                      </span>
+                      <span>{item.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
               <div className="mt-4 flex flex-wrap items-center gap-2">
                 <LangToggle />
                 <ThemeToggle />
@@ -230,10 +259,10 @@ export function Header() {
           type="button"
           onClick={() => setIsMobileMenuOpen(true)}
           aria-label={menuToggleLabel}
-          className="fixed bottom-4 right-4 z-[180] inline-flex items-center gap-2 rounded-full border border-edge bg-panel px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-text shadow-[0_16px_32px_-22px_hsl(var(--accent)/0.65)] lg:hidden"
+          className="fixed bottom-4 right-4 z-[180] inline-flex items-center gap-2 rounded-full border border-edge bg-panel2 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-text shadow-[0_16px_32px_-22px_hsl(var(--accent)/0.65)] lg:hidden"
         >
-          <span aria-hidden="true" className="text-sm leading-none">
-            |||
+          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-edge bg-panel" aria-hidden="true">
+            <Image src="/logos/telegram.svg" alt="" width={11} height={11} className="object-contain" />
           </span>
           <span>{menuToggleLabel}</span>
         </button>
