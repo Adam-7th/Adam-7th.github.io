@@ -149,18 +149,18 @@ export function Header() {
           className={`lg:hidden ${isMobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
         >
           <div
-            className={`fixed inset-0 z-[140] overflow-y-auto overscroll-contain bg-bg pb-4 pt-[72px] shadow-[0_20px_45px_-30px_hsl(var(--accent)/0.55)] transition-[opacity,transform] duration-200 ${
+            className={`fixed inset-0 z-[140] overflow-y-auto bg-bg pb-6 pt-[72px] shadow-[0_20px_45px_-30px_hsl(var(--accent)/0.55)] transition-[opacity,transform] duration-200 ${
               isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
             }`}
           >
-            <div className="mx-auto w-full max-w-[1320px] px-4 py-3 sm:px-6">
-              <nav className="grid gap-2" aria-label="Mobile navigation">
+            <div className="mx-auto w-full max-w-[1320px] px-4 py-4 sm:px-6">
+              <nav className="grid gap-3" aria-label="Mobile navigation">
                 {navItems.map((item) => (
                   <Link
                     key={`mobile-${item.href}`}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`inline-flex min-h-10 items-center rounded-xl border px-3.5 py-2 text-[12px] font-semibold uppercase tracking-[0.14em] ${
+                    className={`rounded-2xl border px-4 py-3 text-sm font-semibold uppercase tracking-[0.14em] ${
                       isActive(item.href)
                         ? "border-brand bg-brand/10 text-brand"
                         : "border-edge bg-panel text-text hover:border-brand"
@@ -171,23 +171,23 @@ export function Header() {
                 ))}
               </nav>
 
-              <div className="mt-3 flex flex-wrap items-center gap-1.5">
+              <div className="mt-4 flex flex-wrap items-center gap-2">
                 <LangToggle />
                 <ThemeToggle />
               </div>
 
-              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 <Link
                   href="/workflows"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex min-h-10 w-full items-center justify-center rounded-full border border-edge bg-panel px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-text hover:border-brand"
+                  className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-edge bg-panel px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-text hover:border-brand"
                 >
                   {t.nav.seeWorkflows}
                 </Link>
                 <Link
                   href="/contact#schedule"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex min-h-10 w-full items-center justify-center rounded-full bg-brand px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-white"
+                  className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-brand px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white"
                 >
                   {t.nav.bookCall}
                 </Link>
