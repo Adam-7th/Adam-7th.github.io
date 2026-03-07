@@ -54,7 +54,7 @@ const parseLang = (value?: string): Lang => {
   return "en";
 };
 
-const parseTheme = (value?: string): ThemeMode => (value === "dark" ? "dark" : "light");
+const parseTheme = (value?: string): ThemeMode => (value === "light" ? "light" : "dark");
 const parseCurrency = (value?: string): CurrencyCode | null => {
   if (value === "RUB" || value === "USD" || value === "EUR" || value === "AED") {
     return value;
