@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import founderImage from "@/founder.png";
+import cofounderImage from "@/Founder-2.png";
 import { useLang } from "@/lib/lang";
 import { SITE_CONTENT } from "@/lib/siteContent";
 import { decodeMojibakeDeep } from "@/lib/text";
@@ -20,7 +21,7 @@ const FOUNDERS = [
       "University of the People: Bachelor's in Computer Science",
     ],
     linkedin: FOUNDER_LINKEDIN_URL,
-    initials: "HT",
+    image: founderImage,
   },
   {
     name: "Elsa Alemayehu",
@@ -29,8 +30,8 @@ const FOUNDERS = [
     education: [
       "Bachelor's degree in Software Engineering at AASTU (Feb 2022 – Jun 2027)",
     ],
-    linkedin: "#",
-    initials: "EA",
+    linkedin: "https://www.linkedin.com/in/elsa-alemayehu-9420aa339/",
+    image: cofounderImage,
   },
 ];
 
@@ -275,7 +276,7 @@ export default function AboutPage() {
             <article key={founder.name} className="rounded-2xl border border-edge bg-panel2 p-5">
               <div className="founder-avatar-shell mx-auto">
                 <Image
-                  src={founderImage}
+                  src={founder.image}
                   alt={`${founder.name} - ${founder.role}`}
                   width={168}
                   height={168}
