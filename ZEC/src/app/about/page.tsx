@@ -18,7 +18,7 @@ const FOUNDERS = [
     bio: "Henok Tariku is an AI automation specialist and Computer Science student at MIPT. He focuses on practical AI automation, workflow design, API integrations, and reliable production systems.",
     education: [
       "MIPT: Bachelor's in Computer Science (Sep 2026 - Present)",
-      "University of the People: Bachelor's in Computer Science",
+      "University of the People: Bachelor's in Computer Science(Sep 2024-Jan 2026)",
     ],
     linkedin: FOUNDER_LINKEDIN_URL,
     image: founderImage,
