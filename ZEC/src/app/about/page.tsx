@@ -21,18 +21,27 @@ const UI_BY_LANG = {
     whyNowBody:
       "In 2026, more daily operations are handled by AI and automation, but most teams still struggle with reliability and execution. Businesses need dependable systems that integrate cleanly and produce measurable results.",
     whatZecTitle: "What ZEC Means",
-    whatZecBody: "ZEC = Z + EC (tech). The name reflects our focus on engineering discipline, execution clarity, and practical automation delivery.",
+    whatZecBody: "ZEC = Z(the) + EC (tech). The name reflects our focus on engineering discipline, execution clarity, and practical automation delivery.",
     toolsTitle: "Tools We Use",
     founderTitle: "Founder",
     founderName: "Henok Tariku",
     founderRole: "Junior Data Analyst & AI Automation Expert",
     founderBio:
-      "Henok Tariku is a Financial Engineering Master's student at WorldQuant University with a strong Computer Science background. He focuses on practical AI automation, workflow design, API integrations, and reliable production rollouts.",
+      "Henok Tariku is  a strong Computer Science background. He focuses on practical AI automation, workflow design, API integrations, and reliable production rollouts.",
     educationTitle: "Educational Background",
     education: [
-      "WorldQuant University: Master's in Financial Engineering (February 2026 - Present)",
-      "MIPT: Bachelor's in Computer Science (November 2025 - Present)",
-      "University of the People: Bachelor's in Computer Science (Dec 2023 - Jan 2026, CGPA 3.95)",
+      "MIPT: Bachelor's in Computer Science (Sep 2026 - Present)",
+      "University of the People: Bachelor's in Computer Science (Sep 2024 - Jan 2026, CGPA 3.95)",
+    ],
+     founderTitle: "Co-Founder",
+    founderName: "Elsa Alemayehu",
+    founderRole: "Co-Founder and  Software Engineer",
+    founderBio:
+      "Elsa Alemayehu is Full-Stack Developer | Co-Founder @ ZEC AI Automation Agency | @She Codes AASTU  | Software Engineering Student @ AASTU.",
+    educationTitle: "Educational Background",
+    education: [
+      "Bachelor's degree,  Software Engineering at AASTU(Feb 2022 – Jun 2027)",
+  
     ],
     teamTitle: "Team",
     teamSubtitle: "Cross-functional delivery team built for clear execution across automation, integrations, product, and rollout.",
