@@ -37,7 +37,7 @@ const UI_BY_LANG = {
     founderName: "Elsa Alemayehu",
     founderRole: "Co-Founder and  Software Engineer",
     founderBio:
-      "Elsa Alemayehu is Full-Stack Developer | Co-Founder @ ZEC AI Automation Agency | @She Codes AASTU  | Software Engineering Student @ AASTU.",
+      "Elsa Alemayehu is Full-Stack Developer and Co-Founder @ ZEC AI Automation Agency | @She Codes AASTU  | Software Engineering Student @ AASTU.",
     educationTitle: "Educational Background",
     education: [
       "Bachelor's degree,  Software Engineering at AASTU(Feb 2022 – Jun 2027)",
