@@ -10,6 +10,29 @@ import { useLocalizedMeta } from "@/lib/useLocalizedMeta";
 
 const TOOL_STACK = ["n8n", "Zapier", "Make", "OpenAI", "HubSpot", "Telegram", "Webhooks"];
 const FOUNDER_LINKEDIN_URL = "https://www.linkedin.com/in/henok-tariku1012/";
+const FOUNDERS = [
+  {
+    name: "Henok Tariku",
+    role: "Founder and AI Automation Specialist",
+    bio: "Henok Tariku is an AI automation specialist and Computer Science student at MIPT. He focuses on practical AI automation, workflow design, API integrations, and reliable production systems.",
+    education: [
+      "MIPT: Bachelor's in Computer Science (Sep 2026 - Present)",
+      "University of the People: Bachelor's in Computer Science",
+    ],
+    linkedin: FOUNDER_LINKEDIN_URL,
+    initials: "HT",
+  },
+  {
+    name: "Elsa Alemayehu",
+    role: "Co-Founder and Full-Stack Developer",
+    bio: "Elsa Alemayehu is a Full-Stack Developer and Co-Founder of ZEC AI Automation Agency. She is also a Software Engineering student at AASTU.",
+    education: [
+      "Bachelor's degree in Software Engineering at AASTU (Feb 2022 – Jun 2027)",
+    ],
+    linkedin: "#",
+    initials: "EA",
+  },
+];
 
 const UI_BY_LANG = {
   en: {
@@ -24,15 +47,14 @@ const UI_BY_LANG = {
     whatZecBody: "ZEC = Z(the) + EC (tech). The name reflects our focus on engineering discipline, execution clarity, and practical automation delivery.",
     toolsTitle: "Tools We Use",
     founderTitle: "Founders",
-    founderName: "Henok Tariku and Elsa Alemayehu",
-    founderRole: "Founder and Co-Founder",
+    founderName: "Elsa Alemayehu",
+    founderRole: "Co-Founder and  Software Engineer",
     founderBio:
-      "Henok Tariku is an AI automation specialist and Computer Science student at MIPT. Elsa Alemayehu is a Full-Stack Developer and Co-Founder of ZEC AI Automation Agency.",
+      "Elsa Alemayehu is Full-Stack Developer and Co-Founder @ ZEC AI Automation Agency | @She Codes AASTU  | Software Engineering Student @ AASTU.",
     educationTitle: "Educational Background",
     education: [
-      "Henok Tariku: MIPT, Bachelor's in Computer Science (Sep 2026 - Present)",
-      "Henok Tariku: University of the People, Bachelor's in Computer Science",
-      "Elsa Alemayehu: Bachelor's degree in Software Engineering at AASTU (Feb 2022 – Jun 2027)",
+      "Bachelor's degree,  Software Engineering at AASTU(Feb 2022 – Jun 2027)",
+  
     ],
     teamTitle: "Team",
     teamSubtitle: "Cross-functional delivery team built for clear execution across automation, integrations, product, and rollout.",
@@ -248,41 +270,45 @@ export default function AboutPage() {
 
       <section className="rounded-3xl border border-edge bg-panel p-6 animate-[hero-in-up_320ms_ease_both]" style={{ animationDelay: "180ms" }}>
         <h2 className="font-display text-2xl text-text">{ui.founderTitle}</h2>
-        <article className="mt-4 grid gap-6 rounded-2xl border border-edge bg-panel2 p-5 md:grid-cols-[auto_1fr] md:items-center">
-          <div className="founder-avatar-shell mx-auto md:mx-0">
-            <Image
-              src={founderImage}
-              alt={`${ui.founderName} - ${ui.founderRole}`}
-              width={168}
-              height={168}
-              className="h-40 w-40 rounded-full object-cover md:h-44 md:w-44"
-            />
-          </div>
+        <div className="mt-4 grid gap-5 md:grid-cols-2">
+          {FOUNDERS.map((founder) => (
+            <article key={founder.name} className="rounded-2xl border border-edge bg-panel2 p-5">
+              <div className="founder-avatar-shell mx-auto">
+                <Image
+                  src={founderImage}
+                  alt={`${founder.name} - ${founder.role}`}
+                  width={168}
+                  height={168}
+                  className="h-40 w-40 rounded-full object-cover"
+                />
+              </div>
 
-          <div>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-muted">{ui.founderName}</p>
-            <h3 className="mt-2 font-display text-2xl text-text">{ui.founderRole}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted">{ui.founderBio}</p>
-            <a
-              href={FOUNDER_LINKEDIN_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-3 inline-flex items-center gap-2 rounded-full border border-edge bg-panel px-3 py-1.5 hover:border-brand"
-            >
-              <Image src="/logos/linkedin.svg" alt="LinkedIn" width={14} height={14} className="h-3.5 w-3.5" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-text">LinkedIn</span>
-            </a>
+              <div className="mt-5">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-muted">{founder.name}</p>
+                <h3 className="mt-2 font-display text-2xl text-text">{founder.role}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted">{founder.bio}</p>
+                <a
+                  href={founder.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex items-center gap-2 rounded-full border border-edge bg-panel px-3 py-1.5 hover:border-brand"
+                >
+                  <Image src="/logos/linkedin.svg" alt="LinkedIn" width={14} height={14} className="h-3.5 w-3.5" />
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-text">LinkedIn</span>
+                </a>
 
-            <div className="mt-4 rounded-xl border border-edge bg-panel px-4 py-3">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-muted">{ui.educationTitle}</p>
-              <ul className="mt-2 space-y-1.5 text-sm text-muted">
-                {ui.education.map((item) => (
-                  <li key={item}>- {item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </article>
+                <div className="mt-4 rounded-xl border border-edge bg-panel px-4 py-3">
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-muted">{ui.educationTitle}</p>
+                  <ul className="mt-2 space-y-1.5 text-sm text-muted">
+                    {founder.education.map((item) => (
+                      <li key={item}>- {item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="rounded-3xl border border-edge bg-panel p-6 animate-[hero-in-up_320ms_ease_both]" style={{ animationDelay: "220ms" }}>
