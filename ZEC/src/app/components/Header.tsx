@@ -18,6 +18,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showQuickMenu, setShowQuickMenu] = useState(false);
 
+  const labAssistantLabel = lang === "ru" ? "AI Лаборатория" : lang === "ar" ? "مساعد المختبر" : "Lab Assistant";
   const navItems = [
     { href: "/", label: t.nav.home },
     { href: "/solutions", label: t.nav.solutions },
@@ -25,6 +26,7 @@ export function Header() {
     { href: "/pricing", label: t.nav.pricing },
     { href: "/case-studies", label: t.nav.caseStudies },
     { href: "/blog", label: t.nav.blog },
+    { href: "/lab-assistant", label: labAssistantLabel },
     { href: "/about", label: t.nav.about },
     { href: "/contact", label: t.nav.contact },
   ];
